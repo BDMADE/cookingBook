@@ -12,6 +12,9 @@ class HomeController < ApplicationController
 
   end
 
+
+
+
   def admin
     if user_signed_in?
       redirect_to home_admin_path

@@ -1,8 +1,15 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!,except: [:recipe,:show]
   # GET /recipes
   # GET /recipes.json
+
+
+  def recipe
+    @recipes = Recipe.all
+  end
+
+
   def index
     @recipes = Recipe.all
   end

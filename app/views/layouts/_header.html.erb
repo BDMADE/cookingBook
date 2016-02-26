@@ -53,39 +53,12 @@
       <div class="container">
         <nav class="responsive-menu">
           <ul>
-            <li><a href="index.html">Home</a>
-              <ul>
-                <li><a href="variation1.html">variation one</a></li>
-                <li><a href="variation2.html">variation two</a></li>
-                <li><a href="variation3.html">variation three</a></li>
-                <li><a href="variation4.html">variation four</a></li>
-                <li><a href="variation5.html">variation five</a></li>
-                <li><a href="variation6.html">variation six</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="recipe-listing.html">Recent Recipes</a>
-              <ul>
-                <li><a href="recipe-listing.html">recipe listing list view</a></li>
-                <li><a href="recipe-listing-grid.html">recipe listing grid view</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="recipe-listing.html">Recipe Detail</a>
-              <ul>
-                <li><a href="recipe-detail.html">Recipe detail version 1</a></li>
-                <li><a href="recipe-detail2.html">Recipe detail version 2</a></li>
-              </ul>
-            </li>
-            <li><a href="our-chefs.html">Chefs</a></li>
-            <li><a href="blog.html">Blog</a>
-              <ul>
-                <li><a href="single.html">Single post</a></li>
-              </ul>
-            </li>
-            <li><a href="elements.html">Elements</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="submit-recipe"><a href="submit-recipe.html">Submit Recipe</a></li>
+            <li><a href="<%= root_url %>">Home</a></li>
+            <li><a href="<%= root_url %>recipe">Recipes</a></li>
+
+            <% if user_signed_in? %>
+                <li class="submit-recipe"><a href="<%= new_recipe_url %>">Submit Recipe</a></li>
+            <% end %>
           </ul>
         </nav>
 
