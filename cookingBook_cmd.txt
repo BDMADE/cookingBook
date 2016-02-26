@@ -1,0 +1,42 @@
+1. Creating recipe
+-----------------------------------
+rails g scaffold Recipe title:string description:text user:references
+
+2. Creating Ingredients model
+-------------------------------
+rails g model Ingredent name:string recipe:belongs_to
+
+or,
+rails g model Ingredent name:string recipe:references
+
+
+3. Creating Direction model
+--------------------------------
+rails g model Direction step:text recipe:belongs_to
+
+or,
+rails g model Direction step:text recipe:references
+
+
+4. Creating Tag Model
+------------------------------------
+rails g model Tag name:string recipe:references
+
+5. Creating Slider
+-------------------------------------
+rails g scaffold Slider name:string
+
+6. Install paperclip with slider
+--------------------------------------
+rails g paperclip Slider image
+
+7. Making a model for recipeslider
+---------------------------------------------
+rails g model photo recipe:references
+
+8. Add paperclip with Photo model (for nested paperclip)
+---------------------------------------------------
+rails g paperclip Photo banner
+
+
+
