@@ -1,6 +1,6 @@
 class Recipe < ActiveRecord::Base
   belongs_to :user
-  has_one :slider
+  has_many :sliders
   has_many :ingredients
   has_many :directions
   has_many :tags
