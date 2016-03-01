@@ -142,3 +142,14 @@ iii) Now open again home/index.html.erb file and write this code for showing sea
                </div>
               </div>
   <% end %>
+
+9.Background image not showing up in heroku,why?
+solution:
+In your production.rb add the following line
+
+config.serve_static_files = true
+config.assets.compile = true
+
+or you can try to precompile the assets locally using
+
+RAILS_ENV=production rake assets:precompile
